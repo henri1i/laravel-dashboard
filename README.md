@@ -1,48 +1,52 @@
-# Teste Junior
+# Dashboard
 
 ## Overview
 
-Usuário deve ser capaz de:
- - Realizar opearções CRUD para clientes, produtos, descontos e pedidos.
- - Adicionar produtos a pedidos.
- - Adicionar desconto a pedidos.
- - Realizar boa parte dessas operações por meio da API (menos os descontos).
+The user should be able to:
+ - Perform CRUD operations for clients, products, discounts and orders.
+ - Add as many products as you want to an order.
+ - Add one discount to an order.
+ - Perform most of these operations through API (saved the discounts).
 
-Interface toooooltamente inspirada (se não copiada) [desse site](https://demo.filamentphp.com/).
-
+The interface was totally inspired (if not copied :D) by the [Filament](https://filamentphp.com/) project.
 ## Preview
 
 ![](https://github.com/henri1i/teste-desenvolvedor-php/blob/henri-borges/images/preview.gif?raw=true)
 
-## Como rodar o projeto?
-[Passo a passo aqui](https://github.com/henri1i/teste-desenvolvedor-php/blob/henri-borges/teste-junior.md)
+## How to install and run the project?
+[Step by step here](https://github.com/henri1i/teste-desenvolvedor-php/blob/henri-borges/teste-junior.md)!
 
-## Como rodar os testes?
-Deve ser criado um banco de dados específico para testes a sua conexão deve ser configurada no .env
-Por exemplo:
+## How to perform the tests?
+You should create a specific database, just to perform tests. The connection can be set on Laravel .env.
 
-1. Criação do banco de dados  "testing"
+For example:
+
 ```terminal
-$ docker exec -u root -it laradock_mariadb_1 bash
+$ docker exec -u root -it laradock_mariadb_0 bash
 
 # mysql -p root
 
 mysql> CREATE DATABASE testing;
 ```
-2. Configuração no .env
+Defining the connection:
 ```terminal
 DB_TEST_DATABASE=testing
 DB_TEST_USERNAME=root
 DB_TEST_PASSWORD=root
 ```
 
-## Melhorias a serem feitas
+## Improvements
 
-- Proteção de rotas com middleware e criação de página de login.
-- Permitir deleção em massa a partir do componente da tabela.
-- Permitir abertura de sidebar no modo mobile.
-- Criar endpoints para API de criação e uso dos descontos.
+ - Create the routes protection, login and register page.
+ - Allow multiple items deletion on table.
+ - Allow the sidebar opening on small resolutions.
+ - Create API endpoints for the discount use and creation.
 
-## Decisões
+## Decisions
 
-Documentei [aqui](https://github.com/henri1i/teste-desenvolvedor-php/blob/henri-borges/decisions.md) algumas das minhas linhas de raciocínio ao longo do desenvolvimento, e o motivo de determinada decisão.
+I've documented [here](https://github.com/henri1i/teste-desenvolvedor-php/blob/henri-borges/decisions.md) some of my train of though I had along the development of this dashboard.
+
+## Technologies used
+ - Laravel 8
+ - Tailwind
+ - Livewire
