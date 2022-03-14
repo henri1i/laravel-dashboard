@@ -11,10 +11,10 @@ The user should be able to:
 The interface was totally inspired (if not copied :D) by the [Filament](https://filamentphp.com/) project.
 ## Preview
 
-![](https://github.com/henri1i/teste-desenvolvedor-php/blob/henri-borges/images/preview.gif?raw=true)
+![](https://github.com/henri1i/laravel-dashboard/blob/beta/images/preview.gif?raw=true)
 
 ## How to install and run the project?
-[Step by step here](https://github.com/henri1i/teste-desenvolvedor-php/blob/henri-borges/teste-junior.md)!
+Tutorial [here](https://github.com/henri1i/teste-desenvolvedor-php/blob/henri-borges/teste-junior.md)!
 
 ## How to perform the tests?
 You should create a specific database, just to perform tests. The connection can be set on Laravel .env.
