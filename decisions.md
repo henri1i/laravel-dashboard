@@ -1,24 +1,18 @@
-# Decisões
-Criei essa página pra documentar minha linha de raciocínio e o motivo pelo qual eu tomei determinada decisão.
+# Decisions
+I've created this page to document my train of thought and why I made a certain decision.  
 
 ## OrderProducts table
 
-### **Problema**
-Uma relação direta entre Orders e Products como demonstrada na imagem abaixo
+### **Problem**
+A direct relationship between Orders and Products as shown in the image below would'nt allow the creation of a order with more than one product nor the storage of the product price at the purchase date.
+We would'nt know for how much a product was bought after the price adjustment of a product.
 
-![simple order products relation](https://raw.githubusercontent.com/henri1i/teste-desenvolvedor-php/henri-borges/images/decisions/orders-products.png)
+![simple order products relation](https://github.com/henri1i/laravel-dashboard/blob/beta/images/decisions/orders-products.png?raw=true)
 
-não permitiria a criação de uma ordem de compra contendo mais de um produto, nem armazenaria o preço do produto na data de compra. Não saberiamos por quanto um produto foi comprado após o reajuste de preço de um produto.
+### **Solution**
+I opted for the creation of a third table, responsible by the relationship between Orders and Products, called OrderProducts. Because of that, it will be possible the precisely tracking of the orders information.
 
-### **Solução**
-Optei pela criação de uma tabela OrderProducts responsável pela relação entre essas duas tabelas. Com isso, será possível a criação de um item para cada produto de cada ordem de compra:
+![](https://github.com/henri1i/laravel-dashboard/blob/beta/images/decisions/orders-oderproducts-products.png?raw=true)
 
-![](https://github.com/henri1i/teste-desenvolvedor-php/blob/henri-borges/images/decisions/orders-oderproducts-products.png?raw=true)
-
-### **Bootstrap ou Tailwind?**
-No início do projeto achei que seria tranquilo o uso do bootstrap, mas agora que tentei utiliza-lo, percebi que ele iria acabar me atrapalhando na velocidade do desenvolvimento do front. Acabei gastando praticamente 3 dias inteiros polindo o back-end, o que acabou me deixando sem tempo.
-
-Por isso, optei pelo uso do tailwind, que estou mais familiarizado e sei que com ele, vou acabar economizando muito tempo.
-
-### **Separação dos Controllers API e Web**
-Inicialmente pensei em utilizar os endpoints da API na interface, mas ao perceber que precisaria adicionar novos métodos que estariam totalmente ligados apenas a interface do blade, preferi separa-los em casos de uso (separar o que muda por razões diferentes e em momentos diferentes :D).
+### ** Split the Controllers between API and Web **
+Initially I thought about keep using the same API endpoints for the web interface, but after realize that I would need to create a bunch of other methods, that would be related just to the Web, I preferred to split them into use cases, as taught by Uncle Bob with the single responsibility principle.
