@@ -2,7 +2,8 @@
     <div class="absolute w-full h-full bg-white z-50" style="box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;">
         <div class="border-b h-[4rem] flex items-center px-6">
             <div>
-                <span class="text-green-500 text-3xl font-bold tracking-tight">dot.</span><span class="text-black text-3xl font-bold tracking-tight">lib</span>
+                <span class="text-black text-3xl font-bold tracking-tight">henri<span class="text-green-500 text-3xl font-bold tracking-tight">1</span>i</span>
+                
             </div>
         </div>
         <div class="px-10 mt-4 flex flex-col">
