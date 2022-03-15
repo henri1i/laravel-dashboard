@@ -1,6 +1,6 @@
 [![](http://www.dotlib.com.br/site/images/footer/bra.png)](http://www.dotlib.com)
 
-# Rodando o projeto
+# Installing and running the project
 
 1. Clone the repo.
 
